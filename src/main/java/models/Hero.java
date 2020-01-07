@@ -9,9 +9,9 @@ public class Hero {
     private int Heroid;
     private static ArrayList<Hero> allHeroes = new ArrayList<>();
 
-    public Hero(String name,String power,String weakness,int age, int id){
+
+    public Hero(String name,String power,String weakness,int age){
         this.Heroname = name;
-        this.Heroid = id;
         this.Heroage = age;             //constructor to create new class objects
         this.Heropower = power;
         this.Heroweakness = weakness;
