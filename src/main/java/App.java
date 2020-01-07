@@ -20,7 +20,7 @@ public class App {
     }
     public static void main(String[] args){     //main method for java to run
         port(getHerokuAssignedPort());
-        staticFileLocation("/public");
+        staticFileLocation("/public.css");
 
         get("/",(request, response) -> {           //Main route to display squads and heroes
             Map<String, Object> model = new HashMap<String, Object>();
@@ -49,7 +49,7 @@ public class App {
             List<Hero> squadHeroes = oneSquad.getAllHeroes(); //get all heroes related to one squad
             model.put("oneSquad",oneSquad);     //add squad and heroes to model hashmap
             model.put("oneHero",squadHeroes);
-            return new ModelAndView(model,"heroes.hbs");       //render model and template
+            return new ModelAndView(model,"herostosquad.hbs");       //render model and template
         },new HandlebarsTemplateEngine());
 
         post("/postNewHero",(request, response) -> {        //post new hero

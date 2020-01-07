@@ -14,13 +14,12 @@
 
 <hr/>
 
-<form method="post" action="/postNewSquad">
+<form method="post" action="/postNewHero">
     <input type="text" name = "name" required>
     <input type="number" name ="age" required>
     <input type="text" name ="power" required>
     <input type="text" name ="weakness" required>
     <select name="squadTeam">
-        <option value="">-</option>
         {{#each allSquads}}
             <option value="{{id}}">{{name}}</option>
         {{/each}}
@@ -28,6 +27,17 @@
     <button type="submit">Submit</button>
 
 </form>
+
+{{#if allSquads}}
+    <p>Here's a list of all the squads </p>
+    <ol>
+        {{#each allSquads}}
+            <li>{{name}} | <a href="/showSquadForHeroes/{{id}}">View Heroes</a> </li><!--view each hero related to squad-->
+        {{/each}}
+    </ol>
+{{else}}
+    <p class="text-danger">Don't have any Squad for your heroes</p>
+{{/if}}
 
 {{/partial}}
 
