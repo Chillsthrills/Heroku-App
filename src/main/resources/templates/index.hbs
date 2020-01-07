@@ -1,44 +1,83 @@
 {{#partial "title"}}Home{{/partial}}
 
 {{#partial "content"}}
-<center><h2 class = "Apptitle">Herosquad</h2></center>
-<form method="post" action="/postNewSquad">
-    <input type="text" name = "name" required>
-    <input type="number" name ="maxsize" required>
-    <input type="text" name ="cause" required>
+    <center><h1 class="herotitle">HeroSquad</h1></center>
+    <div class="row" id="row_class">
+        <div class="col-sm-4">
+            <h2><span class="label label-info">Add Squad</span></h2>
+            <form action="/postNewSquad" method="post">
+                <div>
+                    <label for="MaxSize">MaxSize:</label>
+                    <input type="number" placeholder="Enter maxsize" id="maxsize" name = "maxsize"
+                           required />
+                </div>
+                <div>
+                    <label for="Name">Name:</label>
+                    <input type="text"  placeholder="Enter name" id="name" name="name"
+                           required />
+                </div>
+                <div>
+                    <label for="Cause">Cause:</label>
+                    <input type="text"  placeholder="Enter cause" id="cause" name="cause"
+                           required />
+                </div>
 
-    <button type="submit">Submit</button>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+            <h2>Squad List</h2>
 
-</form>
+            {{#each allSquads}}
+                <label>Size</label>
+                <h2><span class="badge badge-secondary">{{maxsize}}</span></h2>
+                <label>Name</label>
+                <h2><span class="badge badge-secondary">{{name}}</span></h2>
+                <label>Cause</label>
+                <h2><span class="badge badge-secondary">{{cause}}</span></h2>
+            {{/each}}
 
+        </div>
 
-<hr/>
+        <div class="form-group heroes">
 
-<form method="post" action="/postNewHero">
-    <input type="text" name = "name" required>
-    <input type="number" name ="age" required>
-    <input type="text" name ="power" required>
-    <input type="text" name ="weakness" required>
-    <select name="squadTeam">
-        {{#each allSquads}}
-            <option value="{{id}}">{{name}}</option>
-        {{/each}}
-    </select>
-    <button type="submit">Submit</button>
+            <h2><span class="label label-info">Add hero</span></h2>
+            <form action="/postNewHero" method="post">
+                <div class="form-group">
+                    <label for="Age">Age:</label>
+                    <input type="number"  placeholder="Enter age" id="age" name ="age"
+                           required>
+                </div>
+                <div class="form-group">
+                    <label for="Hero name">Hero Name:</label>
+                    <input type="text"  placeholder="Enter hero name" id="name" name="name"
+                           required />
+                </div>
+                <div class="form-group">
+                    <label for="Power">Power:</label>
+                    <input type="text"  placeholder="Enter power" id="power" name="power"
+                           required />
+                </div>
+                <div class="form-group">
+                    <label for="Weakness">Weakness:</label>
+                    <input type="text"  placeholder="Enter weakness" id="weakness" name="weakness"
+                           required />
+                </div>
 
-</form>
-
-{{#if allSquads}}
-    <p>Here's a list of all the squads </p>
-    <ol>
-        {{#each allSquads}}
-            <li>{{name}} | <a href="/showSquadForHeroes/{{id}}">View Heroes</a> </li><!--view each hero related to squad-->
-        {{/each}}
-    </ol>
-{{else}}
-    <p class="text-danger">Don't have any Squad for your heroes</p>
-{{/if}}
-
+                <select name="squadTeam">
+                    {{#each allSquads}}
+                        <option value="{{id}}">{{name}}</option>
+                    {{/each}}
+                </select>
+                <button type="submit">Submit</button>
+            </form>
+    {{#if allSquads}}
+            <p>Here's a list of all the squads </p>
+            <ol>
+                {{#each allSquads}}
+                    <li>{{name}} | <a href="/showSquadForHeroes/{{id}}">View Heroes</a> </li><!--view each hero related to squad-->
+                {{/each}}
+            </ol>
+    {{else}}
+            <p class="text-danger">Don't have any Squad for your heroes</p>
+    {{/if}}
 {{/partial}}
-
 {{> layout.hbs}}

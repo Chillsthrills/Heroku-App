@@ -1,0 +1,11 @@
+@font-face {
+  font-family: 'farcrycustom';
+  src: url('fonts/Far.TTF');
+}
+
+h1> .Apptitle {
+ font-family: farcrycustom;
+ }
+ body {
+    background-color = blue;
+ }
