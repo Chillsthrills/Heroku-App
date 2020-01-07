@@ -1,0 +1,16 @@
+{{#partial "title"}}Home{{/partial}}
+
+{{#partial "content"}}
+
+<form method="post" action="/postNewSquad">
+    <input type="text" name = "name" required>
+    <input type="number" name ="maxsize" required>
+    <input type="text" name ="cause" required>
+
+    <button type="submit">Submit</button>
+
+</form>
+
+{{/partial}}
+
+{{> layout.hbs}}
