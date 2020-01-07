@@ -27,7 +27,7 @@ public class App {
             ArrayList<Squads> allSquads = Squads.getAllSquads();    //get allSquads and heroes
             ArrayList<Hero> allHeroes = Hero.getAllHeroes();
             model.put("allSquads",allSquads);       //add squads and heroes to model
-            model.put("allHeroes",allHeroes);
+            model.put("allHeroes",allHeroes); //k is key used in html/hbs
             return new ModelAndView(model,"index.hbs");     //return model that contains data to show on template
         }, new HandlebarsTemplateEngine());     //render the template
 

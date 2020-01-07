@@ -11,6 +11,24 @@
 
 </form>
 
+
+<hr/>
+
+<form method="post" action="/postNewSquad">
+    <input type="text" name = "name" required>
+    <input type="number" name ="age" required>
+    <input type="text" name ="power" required>
+    <input type="text" name ="weakness" required>
+    <select name="squadTeam">
+        <option value="">-</option>
+        {{#each allSquads}}
+            <option value="{{id}}">{{name}}</option>
+        {{/each}}
+    </select>
+    <button type="submit">Submit</button>
+
+</form>
+
 {{/partial}}
 
 {{> layout.hbs}}
