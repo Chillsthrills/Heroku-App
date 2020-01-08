@@ -3,9 +3,10 @@
   src: url('fonts/Far.TTF');
 }
 
-h1> .Apptitle {
+.Apptitle {
  font-family: farcrycustom;
  }
+
  body {
     background-color = blue;
  }
