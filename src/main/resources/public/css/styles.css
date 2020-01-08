@@ -1,10 +1,3 @@
-@font-face {
-  font-family: 'farcrycustom';
-  src: url('fonts/FARCEB__.TTF');
-}
-#title {
- font-family: farcrycustom !important;
- }
 body {
     font-size: 18px !important;
 }
@@ -16,5 +9,17 @@ body {
     text-decoration: underline !important;
 }
 .herotitle {
-    font-weight: bold;
+    font-weight: bold !important;
+}
+#left_form {
+    margin-right: 5px solid #000019;
+
+}
+#maxsize, #name, #cause {
+    background: #fbfcfc;
+    box-shadow: 5px 5px 10px ##0000FF;
+}
+#age, #power, #weakness {
+    background: #fbfcfc;
+    box-shadow: 5px 5px 10px ##0000FF;
 }

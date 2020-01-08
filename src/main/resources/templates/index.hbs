@@ -5,19 +5,19 @@
     <div class="row" id="row_class">
         <div class="col-sm-6">
             <h2><span class="label label-info" id="add">Add Squad</span></h2>
-            <form action="/postNewSquad" method="post">
+            <form action="/postNewSquad" method="post" id= "left_form">
                 <div>
-                    <label for="MaxSize">MaxSize:</label>
+                    <label for="MaxSize">MaxSize:</label><br />
                     <input type="number" placeholder="Enter maxsize" id="maxsize" name = "maxsize"
                            required />
                 </div><br />
                 <div>
-                    <label for="Name">Name:</label>
+                    <label for="Name">Name:</label><br />
                     <input type="text"  placeholder="Enter name" id="name" name="name"
                            required />
                 </div><br />
                 <div>
-                    <label for="Cause">Cause:</label>
+                    <label for="Cause">Cause:</label><br />
                     <input type="text"  placeholder="Enter cause" id="cause" name="cause"
 
                            required />
@@ -38,28 +38,28 @@
 
         </div>
 
-        <div class= col-sm-6>
+        <div class= col-sm-6 id="left_column">
         <div class="form-group heroes">
 
             <h2><span class="label label-info" id="add">Add hero</span></h2>
             <form action="/postNewHero" method="post">
                 <div class="form-group">
-                    <label for="Age">Age:</label>
+                    <label for="Age">Age:</label><br />
                     <input type="number"  placeholder="Enter age" id="age" name ="age"
                            required>
                 </div>
                 <div class="form-group">
-                    <label for="Hero name">Hero Name:</label>
+                    <label for="Hero name">Hero Name:</label><br />
                     <input type="text"  placeholder="Enter hero name" id="name" name="name"
                            required />
                 </div>
                 <div class="form-group">
-                    <label for="Power">Power:</label>
+                    <label for="Power">Power:</label><br />
                     <input type="text"  placeholder="Enter power" id="power" name="power"
                            required />
                 </div>
                 <div class="form-group">
-                    <label for="Weakness">Weakness:</label>
+                    <label for="Weakness">Weakness:</label><br />
                     <input type="text"  placeholder="Enter weakness" id="weakness" name="weakness"
                            required />
                 </div>
