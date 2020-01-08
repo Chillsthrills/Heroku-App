@@ -1,15 +1,20 @@
 @font-face {
   font-family: 'farcrycustom';
-  src: url('fonts/Far.TTF');
+  src: url('fonts/Far.ttf');
 }
-body {
-    font-size: 18px;
-}
-
-.Apptitle {
- font-family: farcrycustom;
+#title {
+ font-family: farcrycustom !important;
  }
-
+body {
+    font-size: 18px !important;
+}
+#submit {
+    font-size: 16px !important;
+}
+#add {
+    font-weight: bold !important;
+    text-decoration: underline !important;
+}
 .herotitle {
     font-weight: bold;
 }

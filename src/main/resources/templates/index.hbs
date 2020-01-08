@@ -1,10 +1,10 @@
 {{#partial "title"}}Home{{/partial}}
 
 {{#partial "content"}}
-    <center><h1 class="herotitle">HeroSquad</h1></center><br />
+    <center><h1 class="herotitle" id="title">HeroSquad</h1></center><br />
     <div class="row" id="row_class">
         <div class="col-sm-6">
-            <h2><span class="label label-info">Add Squad</span></h2>
+            <h2><span class="label label-info" id="add">Add Squad</span></h2>
             <form action="/postNewSquad" method="post">
                 <div>
                     <label for="MaxSize">MaxSize:</label>
@@ -23,7 +23,7 @@
                            required />
                 </div><br />
 
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary" id="submit">Submit</button>
             </form>
             <h2>Squad List</h2>
 
@@ -41,7 +41,7 @@
         <div class= col-sm-6>
         <div class="form-group heroes">
 
-            <h2><span class="label label-info">Add hero</span></h2>
+            <h2><span class="label label-info" id="add">Add hero</span></h2>
             <form action="/postNewHero" method="post">
                 <div class="form-group">
                     <label for="Age">Age:</label>
@@ -69,7 +69,7 @@
                         <option value="{{id}}">{{name}}</option>
                     {{/each}}
                 </select>
-                <button type="submit" class="btn btn-success">Submit</button>
+                <button type="submit" class="btn btn-success" id="submit">Submit</button>
             </form>
           </div>
           </div>
