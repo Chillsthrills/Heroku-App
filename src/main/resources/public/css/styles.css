@@ -2,6 +2,9 @@
   font-family: 'farcrycustom';
   src: url('fonts/Far.TTF');
 }
+body {
+    font-size= 18px;
+}
 
 .Apptitle {
  font-family: farcrycustom;
