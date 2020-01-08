@@ -3,7 +3,7 @@
   src: url('fonts/Far.TTF');
 }
 body {
-    font-size= 18px;
+    font-size: 18px;
 }
 
 .Apptitle {
@@ -11,5 +11,5 @@ body {
  }
 
 .herotitle {
-    font-weight= bold;
+    font-weight: bold;
 }
